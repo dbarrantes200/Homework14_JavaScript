@@ -1,5 +1,4 @@
 // from data.js
-//var tableData = data;
 // Get references to the tbody element, input fields and buttons
 var $tbody = document.querySelector("tbody");
 var $dateInput = document.querySelector("#date");
@@ -13,7 +12,6 @@ var $resetBtn = document.querySelector("#reset");
 $searchBtn.addEventListener("click", handleSearchButtonClick);
 $resetBtn.addEventListener("click", handleResetButtonClick);
 // Set tableData to data initially
-//var tableData = data;
 var tableData = data;
 
 // renderTable renders the filtered data to the tbody
@@ -33,7 +31,7 @@ function renderTable() {
     }
   }
   $(document).ready( function () {
-  	$('#table_id').DataTable({
+  	$(newFunction()).DataTable({
   		searching: false,
     	ordering:  false
   	});
@@ -93,6 +91,4 @@ function handleResetButtonClick() {
   renderTable();
 }
 
-// Render the table for the first time on page load
-renderTable();
 
